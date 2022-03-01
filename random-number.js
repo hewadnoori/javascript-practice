@@ -8,7 +8,7 @@
 let lowInp = prompt("give me your lowest number");
 let highInp = prompt("give me your highest number");
 //users input is used to make the random number generator which is rounded down. the user input is also turned into a integer.
-let random = Math.floor((Math.random() * (+highInp - +lowInp)) + +lowInp)
+let random = Math.floor((Math.random() * (+highInp - +lowInp + 1)) + +lowInp)
 //the results are printed to the console.
 console.log(`${random} is a random number between ${lowInp} and ${highInp}`)
 
