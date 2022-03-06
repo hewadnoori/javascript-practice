@@ -58,5 +58,5 @@ document.querySelector('main').innerHTML = `
 console.log(playlist.join(", "));
 //this checks if the value given is within the array. If it is, it returns true. if not, it returns false.
 console.log(playlist.includes('So What'));//returns true because this string is within the array
-//this returns the index or position of an element in an array
-console.log(playlist.indexOf('At Last'));
+//this returns the index or position of an element in an array. If isn't in the array, it will return -1.
+console.log(playlist.indexOf('At Last'));// this will return 3 bacause it is the 4th item in the array
