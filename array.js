@@ -53,10 +53,31 @@ document.querySelector('main').innerHTML = `
         ${createListItems(playlist)}
     </ol>
 `;
-//this will join all of the items within a array and insert whatever arguement you gave. If you just want a little bit of
+//this will join all of the items within a array and insert whatever argument you gave. If you just want a little bit of
 //space in between each ones, you use " ".
 console.log(playlist.join(", "));
 //this checks if the value given is within the array. If it is, it returns true. if not, it returns false.
 console.log(playlist.includes('So What'));//returns true because this string is within the array
 //this returns the index or position of an element in an array. If isn't in the array, it will return -1.
-console.log(playlist.indexOf('At Last'));// this will return 3 bacause it is the 4th item in the array
+console.log(playlist.indexOf('At Last'));// this will return 3 because it is the 4th item in the array
+
+const play = [
+    ['So What', 'Miles Davis', '9:04'],
+    ['Respect', 'Aretha Franklin', '2:45'],
+    ['What a Wonderful World', 'Louis Armstrong', '2:21'],
+    ['At Last', 'Ella Fitzgerald', '4:18'],
+    ['Three Little Birds', 'Bob Marley and the Wailers', '3:01'],
+    ['The Way You Look Tonight', 'Frank Sinatra', '3:21']
+];
+
+const myArtists = `${play[0][1]}, ${play[1][1]}, ${play[5][1]}`;
+console.log(myArtists);
+//you can use a function and a for loop to show all of the data within the array that contains an array.
+
+function createPlayItems(arr) {
+    let items = '';
+    for (let i = 0; i < arr.length; i++) {
+        items += `<li>${arr[i][0]}, by ${arr[i][1]} - ${arr[i][2]}</li>`;
+    }
+    return items;
+}
