@@ -31,7 +31,8 @@ for (let i = 0; i < quiz.length; i++) {
     }
 }
 // 4. Display the number of correct answers to the user
-document.querySelector('main').innerHTML = `<h3>You got these questions right:</h3>
+document.querySelector('main').innerHTML = `<h1>You got ${correct} right!</h1>
+<h3>You got these questions right:</h3>
 <ol>
 ${right}
 </ol>
