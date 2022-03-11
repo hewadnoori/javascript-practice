@@ -22,4 +22,27 @@ const personProps = Object.keys(person);
 console.log(personProps);
 
 //To check the length of an object
-console.log(Object.keys(person).length);  
+console.log(Object.keys(person).length);  //6
+
+//The Object.values() method returns an array of a given object's property values, in the same order as provided by a for...in loop.
+const personVals = Object.values(person);
+console.log(personVals);
+
+// You can use the spread operator (...) to copy key/value pairs from one object to another.
+const name = {
+    firstName: 'Reggie',
+    lastName: 'Williams',
+};
+
+const role = {
+    title: 'Software developer',
+    skills: ['JavaScript', 'HTML', 'CSS'],
+    isTeacher: true,
+};
+// merge `name` and `role` into a `person` object
+const people = {
+    ...name,
+    ...role
+};
+
+console.log(people);

@@ -1,11 +1,11 @@
 // 1. Create a multidimensional array to hold quiz questions and answers
 const quiz = [
-    ["What is the color of the sky?", "blue"],
-    ["What is the best food on earth?", "pizza"],
-    ["What continent is the U.S. on?", "north america"],
+    { question: "What is the color of the sky?", answer: "blue" },
+    { question: "What is the best food on earth?", answer: "pizza" },
+    { question: "What continent is the U.S. on?", answer: "north america" },
 ];
-let wrong = "";
-let right = "";
+let wrong = [];
+let right = [];
 // 2. Store the number of questions answered correctly
 let correct = 0;
 
@@ -17,27 +17,36 @@ let correct = 0;
         answered questions increments by 1
 */
 for (let i = 0; i < quiz.length; i++) {
-    input = prompt(quiz[i][0]);
-    if (!input) {
-        let message = alert("Please answer with a word");
+    let question = quiz[i].question;
+    let answer = quiz[i].answer;
+    let response = prompt(question);
 
-    }
-    else if (quiz[i].includes(input.toLowerCase())) {
-        correct += 1;
-        right += `<li>${quiz[i][0]}</li>`
+
+    if (response === answer) {
+        correct++;
+        right.push(question);
     }
     else {
-        wrong += `<li>${quiz[i][0]}</li>`
+        wrong.push(question);
     }
 }
+function createListItems(arr) {
+    let items = '';
+    for (let i = 0; i < arr.length; i++) {
+        items += `<li>${arr[i]}</li>`;
+    }
+    return items;
+}
+
 // 4. Display the number of correct answers to the user
-document.querySelector('main').innerHTML = `<h1>You got ${correct} right!</h1>
-<h3>You got these questions right:</h3>
-<ol>
-${right}
-</ol>
-<h3>You got these questions wrong:</h3>
-<ol>
-${wrong}
-</ol>
-`
+let html = `
+    <h1>You got ${correct} question(s) correct</h1>
+    <h2>You got these questions right:</h2>
+    <ol>${createListItems(right)}</ol>
+  
+    <h2>You got these questions wrong:</h2>
+    <ol>${createListItems(wrong)}</ol>
+  `;
+
+document.querySelector('main').innerHTML = html;
+// 4. Display the number of correct answers to the user
