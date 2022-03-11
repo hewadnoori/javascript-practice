@@ -49,4 +49,4 @@ let html = `
   `;
 
 document.querySelector('main').innerHTML = html;
-// 4. Display the number of correct answers to the user
+
