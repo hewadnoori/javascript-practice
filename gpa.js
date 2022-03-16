@@ -21,7 +21,6 @@ function calculate_gpa(student_grades) {
     let grade_total = 0;
     let gpa = 0;
     for (let i = 0; i < student_grades.length; i++) {
-        //if (student_grades[i] !== 1 || student_grades[i] !== 2 || student_grades[i] !== 3 || student_grades[i] !== 4) {
         if (student_grades[i] < 1 || student_grades[i] > 4) {
             document.querySelector('main').innerHTML =
                 `invalid grade
