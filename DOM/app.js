@@ -36,3 +36,10 @@ const items = document.getElementsByTagName('li');
 for (let i = 0; i < items.length; i++) {
     items[i].style.color = 'orchid';
 }
+
+const highlights = document.getElementsByClassName('highlight');
+//another more compact way to loop through an array. This is a for of loop that uses the highlight var as the i var and loops through the highlights which has three li's linked to it.
+for (const highlight of highlights) {
+    highlight.style.backgroundColor = 'cornsilk';
+    console.log(highlight);
+}
