@@ -1,3 +1,5 @@
+//location.href = Get the URL of the current page
+//typing window in google chromes console will allow you to get all of the controls that you can use.
 // const body = document.body;//this references the body element and assigns it to a variable
 
 // body.addEventListener('click', () => { // called the addeventlistener on the body, instructing the browser to do something when its clicked.
