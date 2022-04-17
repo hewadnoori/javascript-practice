@@ -48,7 +48,6 @@ btnRemove.addEventListener('click', () => {
 })
 //if you want to select multiple elements by tag names.
 document.getElementsByTagName('li');
-document.getE
 //if you want to find the amount of items in an html collection
 document.getElementsByTagName('li').length
 
