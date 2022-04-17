@@ -8,7 +8,16 @@ const person = {
     age: 37,
     isStudent: true,
     skills: ['Javascript', 'Html', 'CSS'],
+    bark: function () {
+        console.log('Woof!');
+    }
 };
+console.log(person.name);
+console.log(person.city);
+person.bark();
+console.log(person['age']);
+console.log(person['isStudent']);
+person['bark']();
 //You can add variables into the object and you can also perform math on properties that are set to numeric values.
 person.nickname = 'Duke';
 const message = `Hi, I'm ${person.name}. I live in ${person.city}. People call me ${person.nickname}. My age is ${person.age + 1}. I have ${person.skills.length} skills: ${person.skills.join(', ')}.`;
@@ -46,3 +55,5 @@ const people = {
 };
 
 console.log(people);
+
+//JavaScript Class Syntax
