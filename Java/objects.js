@@ -57,3 +57,51 @@ const people = {
 console.log(people);
 
 //JavaScript Class Syntax
+//since dog is a common value, we can make a class
+const ernie = {
+    animal: 'dog',
+    age: '1',
+    breed: 'pug',
+    bark: function () {
+        console.log('Woof!');
+    }
+}
+
+const vera = {
+    animal: 'dog',
+    age: 8,
+    breed: 'Border Collie',
+    bark: function () {
+        console.log('Woof!');
+    }
+}
+
+const scofield = {
+    animal: 'dog',
+    age: 6,
+    breed: 'Doberman',
+    bark: function () {
+        console.log('Woof!');
+    }
+}
+
+const edel = {
+    animal: 'dog',
+    age: 7,
+    breed: 'German Shorthaired Pointer',
+    bark: function () {
+        console.log('Woof!');
+    }
+}
+//a class is like a blueprint
+//capitalizing the first letter of a class name in its declaration is a common convention in programming
+class Pet {
+    //a constructor method is like a factory
+    //add a constructor method which will outline the properties that your class will have
+    constructor(animal, age, breed) {
+        this.animal = animal;
+        this.age = age;
+        this.breed = breed;
+    }
+}
+
