@@ -3,11 +3,13 @@ Key: value pairs. key = name of variable, value = value of said variable.
 An object is a single item that holds multiple variables.
 */
 const person = {
+    //this is a property
     name: 'Edward',
     city: 'New York',
     age: 37,
     isStudent: true,
     skills: ['Javascript', 'Html', 'CSS'],
+    //this is a method
     bark: function () {
         console.log('Woof!');
     }
