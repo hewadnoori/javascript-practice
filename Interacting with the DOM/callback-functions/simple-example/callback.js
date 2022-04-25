@@ -2,10 +2,17 @@
 //     console.log('Hello');
 // }
 //this function can also be written as an anonymous function
-const sayHello = function () {
-    console.log('Hello');
-}
+// function () {
+//     console.log('Hello');
+// }
 function executeCallback(callback) {
     callback();
 }
-executeCallback(sayHello);
+executeCallback(function () {
+    console.log('Hello');
+});
+executeCallback(() => {
+    console.log('Hello');
+});
+//if there is a single line of code, you cna remove the curly braces.
+executeCallback(() => console.log('Hello'));
