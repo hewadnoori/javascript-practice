@@ -1,13 +1,18 @@
-function flow(input, funcArray) {
-
-
-    return flow(input, funcArray);
+function shuffleCards(topHalf, bottomHalf) {
+  // YOUR CODE HERE
 }
 
-// To check if you've completed the challenge, uncomment this code!
-function multiplyBy2(num) { return num * 2; }
-function add7(num) { return num + 7; }
-function modulo4(num) { return num % 4; }
-function subtract10(num) { return num - 10; }
-const arrayOfFunctions = [multiplyBy2, add7, modulo4, subtract10];
-console.log(flow(2, arrayOfFunctions)); // -> -7
+
+
+// UNCOMMENT TO TEST YOUR WORK
+const topHalf = ['Queen of Diamonds', 'Five of Hearts', 'Ace of Spades', 'Eight of Clubs'];
+const bottomHalf = ['Jack of Hearts', 'Ten of Spades'];
+console.log(shuffleCards(topHalf, bottomHalf));
+  /*-> ['Queen of Diamonds',
+        'Jack of Hearts',
+        'Five of Hearts',
+        'Ten of Spades',
+        'Ace of Spades',
+        'Eight of Clubs',
+      ]
+  */
