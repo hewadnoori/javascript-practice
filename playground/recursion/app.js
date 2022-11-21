@@ -2,24 +2,16 @@ function cascade(number, counterDown = Math.ceil(Math.log10(number + 1)), counte
     
     if (counterDown !== 0){
         console.log(Math.floor(number / divide))
-        //console.log(divide)
         divide = divide * 10
-        // console.log(divide)
         counterDown --
-        //console.log(counterDown)
     }
     if(counterDown === 0 && counterUp === Math.ceil(Math.log10(number + 1)) - 1){
         divide = divide / 10
     }
     if(counterDown === 0 && counterUp !== 0){
         divide = divide / 10
-        // console.log(number)
-        // console.log(divide)
         console.log(Math.floor(number / divide))
-        //console.log(divide)
-        counterUp --
-        //console.log(counterUp)
-        
+        counterUp --      
     }
     if(counterDown === 0 && counterUp === 0){
         return 
