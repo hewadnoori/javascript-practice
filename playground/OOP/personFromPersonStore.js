@@ -1,0 +1,23 @@
+//create function personFromPersonStore, takes input of name and age
+    //create person objects using the Object.create method on the personStore object
+
+const personStore = {
+  greet: function() {
+    console.log('hello');
+  }
+}
+
+function personFromPersonStore(name, age) {
+	// add code here
+   const person = Object.create(personStore);
+   person.name = name;
+   person.age = age; 
+   return person;
+}
+
+const sandra = personFromPersonStore('Sandra', 26);
+
+// Uncomment these lines to check your work!
+console.log(sandra.name); // -> Logs 'Sandra'
+console.log(sandra.age); // -> Logs 26
+sandra.greet(); // -> Logs 'hello'
